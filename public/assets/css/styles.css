@@ -81,6 +81,7 @@ div {
   text-align: center;
   padding: 1em 0 .5em;
 }
+
 #small_logo {
   width:200px;
   height: 200px;
@@ -117,14 +118,14 @@ a {
   vertical-align: top !important;
 }
 
-#nav {
+/*#nav {
   position: fixed;
   width: 100%;
   overflow: hidden;
   background: #ffffff;
   border-bottom: 1px solid #e6e9eb;
   font-size: 20px;
-}
+}*/
 
 /*Photo Gallery*/
 .media {
@@ -136,6 +137,7 @@ a {
 }
 
 .dog_container {
+  z-index: -3;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -143,6 +145,8 @@ a {
   
 }
 .dog_image {
+  position: relative;
+  z-index: -2;
   display: block;
   width: 100%;
   height: auto;
@@ -153,7 +157,8 @@ a {
 }
 
 .dog_overlay {
-  position: absolute;
+  position: relative;
+  z-index: -1;
   top: 0;
   bottom: 0;
   left: 0;
@@ -213,6 +218,8 @@ a {
 }
 
 .adopt_container {
+  z-index: -1;
+  position: relative;
   display: flex;
   justify-content: center;
   margin: 0 auto;
@@ -258,21 +265,82 @@ a {
   line-height: 25px;
 }
 
-
-
-#nav ul li a {
-  display: block;
-  color: 7B8D8E;
-  padding: 1em .75em;
-  font-size: 1.15em;
-}
-
 .wsite-menu-default a {
   font-family: "Montserrat" !important;
   text-transform: uppercase !important;
 }
 
+.overlay-content a:visited {
+  color: #66c2ff;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#mySidebar {
+  color: blue;
+}
+
 .openbtn {
+  position: fixed;
+  z-index: 0;
+  bottom: 653px;
+  font-size: 25px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 35px 35px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/*.openbtn {
   font-size: 40px;
   cursor: pointer;
   position: relative;
@@ -297,10 +365,10 @@ a {
 }
 
 .overlay {
-  height: 100%;
+  height: 70%;
   width: 0;
-  position: fixed;
-  z-index: 1;
+  position: absolute;
+  z-index: 0;
   top: 0;
   left: 0;
   background-color: #AAA6A3;
@@ -336,7 +404,7 @@ a {
   top: 20px;
   right: 45px;
   font-size: 60px;
-}
+}*/
 
 .home_background {
   background-size: cover;

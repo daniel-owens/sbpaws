@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- comment from rai -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>SB Rescue</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css" media="screen" title="no title">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body class="short-header-page  wsite-theme-light  wsite-page-index full-width-on touch">
+
+    <div id="header-wrap">
+            <label for="nav-trigger" class="nav-trigger hamburger">
+                <span class="open-btn">
+                    <span class="mobile"></span>
+                    <span class="mobile"></span>
+                    <span class="mobile"></span> 
+                </span>
+            </label>
+            <div id="logo">
+                <span class="wsite-logo">
+
+                    <a href="/">
+                        <img src="assets/img/logo1.jpg" alt="Cause For SB Paws">
+                    </a>
+
+                </span>
+            </div>
+            <div class="sticky-wrapper">
+                <div class="sticky-wrapper">
+                    <div class="sticky-wrapper">
+                        <div class="sticky-wrapper">                      
+                          {{> navbar }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div id="banner-wrap">
+        <div class="application_background"></div>
+    </div>
+
+    <div id="main-wrap">
+        <h2 style="margin-top: 30px;">
+            <font size="6">Adoption Application</font>
+            <br>
+        </h2>
+
+        <div class="adoption_info">
+            <span class="attn">PLEASE READ THIS BEFORE APPLYING.</span>
+            <span>If you are applying for multiple dogs at multiple rescues, we ask that you not apply for a Cause dog yet. We
+                are small and foster based and rescue on the side. When we work to coordinate home checks and then a potential
+                adopter adopts another dog in the meantime, it is very hard on us. Please apply when you are 100% interested
+                in one of our dogs so we do not invest time into the adoption process with you. Please also always have the
+                courtesy to let us know if you adopted another dog in the meantime after applying.</span>
+            <span>Also understand rescued pets often come from neglectful, abusive, or otherwise substandard situations, so please
+                understand many of our available dogs may need basic training, have poor indoor manners (as they lived outside
+                most of their lives), may require potty training, etc. We work with them as much as possible with trainers
+                as well as in our homes during the foster period to ensure they are adoptable. No dog is ever "perfect,"
+                although we think they all are, but a rescued dog can come with emotional baggage that not everyone is ready
+                to handle. They may take longer to bond with you and trust you. They may have separation anxiety, and scratch
+                at your doors and eat your shoes when left alone. They say dogs only live in the "now," but some of our dogs
+                are more sensitive than others, and have lasting idiosyncrasies that require a patient, loving and understanding
+                human. So please make sure you are ready to embark on one of the most fulfilling and challenging adventures
+                ever - rescuing a dog. If you are, you will find yourself being "rescued" just as much as the baby you are
+                rescuing. </span>
+        </div>
+
+        <div>
+            <div style="height: 20px; overflow: hidden; width: 100%;"></div>
+            <hr class="styled-hr" style="width:100%;">
+            <div style="height: 20px; overflow: hidden; width: 100%;"></div>
+        </div>
+
+        <h2 class="wsite-content-title" style="text-align:left; margin-left: 50px;">Your contact info
+            <br>
+        </h2>
+
+        <div class="form">
+
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="firstName">First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="inputPhone">Phone</label>
+                        <input type="text" class="form-control" id="inputPhone" placeholder="Phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                            Sign me up for Newsletter!
+                        </label>
+                    </div>
+                </div>
+                <button id="submit" class="btn btn-primary">Submit Application</button>
+            </form>
+
+        </div>
+
+    </div>
+
+   
+<!-- Modal -->
+<div class="modal fade" id="registration" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Success</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         Thank you so much for submitting an adoption application! We will get in touch with you shortly!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Custom Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+    <script src="/assets/js/applications.js" type="text/javascript"></script>
+
+</body>
+
+</html>
